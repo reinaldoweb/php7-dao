@@ -36,12 +36,20 @@ require_once("config.php");
 
 //Atualizando dados do usuario
 
+// $usuario = new Usuario();
+
+// $usuario->loadById(9);
+
+// $usuario->update("Irene", "123456");
+
+// echo $usuario;
+
+
+//Deletando dados do usuario
+
 $usuario = new Usuario();
-
-$usuario->loadById(9);
-
-$usuario->update("Irene", "123456");
-
+$usuario->loadById(12);
+$usuario->delete();
 echo $usuario;
 
 ?>
