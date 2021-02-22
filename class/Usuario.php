@@ -123,7 +123,7 @@ class Usuario {
 
 	}
 
-	public function update($login, $password){
+	public function update($login, $password){//Função para atualiar usuario
 
 		$this->setDeslogin($login);
 		$this->setDessenha($password);

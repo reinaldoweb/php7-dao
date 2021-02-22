@@ -28,10 +28,20 @@ require_once("config.php");
 
 //iNSERINDO NOVO USUARIO
 
-$aluno = new Usuario("aluno", "!@#$5"); // Pega dados do metodo construtor
+// $aluno = new Usuario("aluno", "!@#$5"); // Pega dados do metodo construtor
 
-$aluno->insert();
+// $aluno->insert();
 
-echo $aluno;
+// echo $aluno;
+
+//Atualizando dados do usuario
+
+$usuario = new Usuario();
+
+$usuario->loadById(9);
+
+$usuario->update("Irene", "123456");
+
+echo $usuario;
 
 ?>
