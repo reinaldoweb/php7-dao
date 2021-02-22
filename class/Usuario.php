@@ -54,6 +54,7 @@ class Usuario {
 		}
 
 	}
+	//Lista todos os usuarios da tabela
 
 	public static function getList(){
 
@@ -63,6 +64,7 @@ class Usuario {
 
 	}
 
+	//Busca um usuario na tabela de acordo com o login
 	public static function search($login){
 
 		$sql = new Sql();
@@ -73,6 +75,7 @@ class Usuario {
 
 	}
 
+	//Buasca usuario logado
 	public function login($login, $password){
 
 		$sql = new Sql();
@@ -102,6 +105,8 @@ class Usuario {
 		$this->setDtcadastro(new DateTime($data['dtcadastro']));
 
 	}
+
+	//
 
 	public function insert(){
 
