@@ -96,6 +96,7 @@ class Usuario {
 		}
 
 	}
+	// Metodo para receber dados 
 
 	public function setData($data){
 
@@ -106,18 +107,17 @@ class Usuario {
 
 	}
 
-	//
+	//Cria usuario novo a partir da classe usuario
 
 	public function insert(){
 
 		$sql = new Sql();
-
 		$results = $sql->select("CALL sp_usuarios_insert(:LOGIN, :PASSWORD)", array(
 			':LOGIN'=>$this->getDeslogin(),
 			':PASSWORD'=>$this->getDessenha()
 		));
 
-		if (count($results) > 0) {
+		if(count($results) > 0) {
 			$this->setData($results[0]);
 		}
 
@@ -153,7 +153,7 @@ class Usuario {
 
 	}
 
-	public function __construct($login = "", $password = ""){
+	public function __construct($login = "", $password = ""){//Caso não chame alimenta com vazio pra não dar erro.
 
 		$this->setDeslogin($login);
 		$this->setDessenha($password);

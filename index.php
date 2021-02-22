@@ -20,12 +20,18 @@ require_once("config.php");
 
 //Carrega usuario logado
 
-$usuario = new Usuario();
-$usuario->login("reinaldo", "!@#$");
+// $usuario = new Usuario();
+// $usuario->login("reinaldo", "!@#$");
 
-echo $usuario;
+// echo $usuario;
 
 
+//iNSERINDO NOVO USUARIO
 
+$aluno = new Usuario("aluno", "!@#$5"); // Pega dados do metodo construtor
+
+$aluno->insert();
+
+echo $aluno;
 
 ?>
